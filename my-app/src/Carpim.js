@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
+
+let num1;
+let num2;
 const Carpim =()=>{
-    
+      
     const [num, setNum] = useState('0'); //iki elemanli arry.. ilki parantez icindeki sayi ikincisi fonksiyon.. sayiyi degistirecek fonksiyon
     // if (num!='Sayi Giriniz!'){
     //     console.log(num);
@@ -10,39 +13,90 @@ const Carpim =()=>{
     //     console.log(typeof(n));
     
     // };
-    const num1=num;
+    
     function carp(){
         // if (num==0){
         //     num=('')
         // }
         // console.log('nummer1 is',num1);
-        setNum('Ikinci Sayiyi Giriniz!');
+        // setNum('Ikinci Sayiyi Giriniz!');
         // num=('')
+        num1= num;
+        console.log(num1, typeof num1);
+        // document.getElementById(gosterge).value
+        setNum('')
+        // setNum('Ikinci Sayiyi Giriniz!');
         // console.log('ilk sayi',num1);
         
         // console.log('yeni sayi',num)
     }
     function esit(){
-        console.log('eski sayi',num1)
-        let num2=num1*num;
-        console.log('toplam is',num2);
-        setNum(num2);
+        console.log(typeof num1, num1);
+        
+        // console.log('eski sayi',num1)
+        // num2=num1*num;
+        // console.log('toplam is',num2);
+        // setNum(num2);
+        num2=num;
+        console.log(typeof num2, num2);
+        console.log(num2);
+        
+            let sonuc=parseInt(num1)*parseInt(num2);
+            console.log(typeof num2);
+            setNum(sonuc);
+        
     }
     
     return(
         <div>
             <h1>Carpim</h1>
-            <h1>{num}</h1>
-            <button onClick={()=>setNum(()=>num+'1')}>1</button> 
+            <h1 id="gosterge">{num}</h1>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'1';
+                }else 
+                return num+'1'})}>1</button> 
             {/* num=0 ? setNum=(''): */}
-            <button onClick={()=>setNum(()=>num+'2')}>2</button>
-            <button onClick={()=>setNum(()=>num+'3')}>3</button><br/>
-            <button onClick={()=>setNum(()=>num+'4')}>4</button>
-            <button onClick={()=>setNum(()=>num+'5')}>5</button>
-            <button onClick={()=>setNum(()=>num+'6')}>6</button><br/>
-            <button onClick={()=>setNum(()=>num+'7')}>7</button>
-            <button onClick={()=>setNum(()=>num+'8')}>8</button>
-            <button onClick={()=>setNum(()=>num+'9')}>9</button><br/>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'2';
+                }else 
+                return num+'2'})}>2</button>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'3';
+                }else 
+                return num+'3'})}>3</button><br/>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'4';
+                }else 
+                return num+'4'})}>4</button>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'5';
+                }else 
+                return num+'5'})}>5</button>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'6';
+                }else 
+                return num+'6'})}>6</button><br/>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'7';
+                }else 
+                return num+'7'})}>7</button>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'8';
+                }else 
+                return num+'8'})}>8</button>
+            <button onClick={()=>setNum(()=>{
+                if(num==0){
+                    return ''+'9';
+                }else 
+                return num+'9'})}>9</button><br/>
             <button onClick={()=>setNum(()=>num+'0')}>0</button>
             <button onClick={()=>carp()}>*</button>
             <button onClick={()=>esit()}>=</button>
