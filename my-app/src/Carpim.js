@@ -22,7 +22,13 @@ const Carpim =()=>{
     //     console.log(typeof(n));
     
     // };
-    
+    function silme(){
+        num9='';
+        num7='';
+        num8='';
+        num1='';
+        setNum(0)
+    }
     function carp(){
         // if (num==0){
         //     num=('')
@@ -42,7 +48,7 @@ const Carpim =()=>{
         // console.log(num1, typeof num1);
         setNum('0');
         num7='';
-        setNumr(num1+'*');
+        // setNumr(num1+'*');
         // setNum('Ikinci Sayiyi Giriniz!');
         // console.log('ilk sayi',num1);
         
@@ -52,18 +58,21 @@ const Carpim =()=>{
         num7=num;
         num8='';
         num9='';
+        num1='';
         setNum('0')
      }
     function toplama(){
         num8=num;
         num7='';
         num9='';
+        num1='';
         setNum('0')
      }
     function bolum(){
         num9=num;
         num7='';
         num8='';
+        num1='';
         setNum('0')
      }
     function esit(){
@@ -86,13 +95,13 @@ const Carpim =()=>{
 
         }else if (num9!=''){
             bolumsonucu=parseInt(num9)/parseInt(num2);
-            setNum(bolumsonucu)
-        } else{
-            console.log('sonucumuz',eksisonuc);
+            setNum(bolumsonucu);
+        } else if (num1!=''){
+            
             let sonuc=parseInt(num1)*parseInt(num2);
             console.log(typeof num2);
             setNum(sonuc);
-        }
+        } else console.log('yokartikdahaneler')
     }
     
     return(
@@ -100,14 +109,14 @@ const Carpim =()=>{
             <h1>Carpim</h1>
             <h1 id="gosterge">{num}</h1>
             {/* <h1 id="gosterg">{numr}</h1> */}
-            <button onClick={()=>setNum(0)}>C</button> 
+            <button onClick={()=>silme()}>C</button> 
             <button onClick={()=>setNum(()=>{
                 if((num=='') || (num=='(') || (num=='0')){
                     return '(';
                 }else 
                 return num+')'})}>()</button>
                 <button onClick={()=>setNum('')}>%</button>
-                <button onClick={()=>setNum('')}>/</button><br/>
+                <button onClick={()=>bolum()}>/</button><br/>
             <button onClick={()=>setNum(()=>{
                 if(num==0){
                     return ''+'1';
@@ -158,9 +167,9 @@ const Carpim =()=>{
                 return num+'9'})}>9</button>
                 <button onClick={()=>toplama()}>+</button><br/>
             <button onClick={()=>setNum(()=>num+'0')}>0</button>
-            <button onClick={()=>carp()}>*</button>
+            {/* <button onClick={()=>carp()}>*</button> */}
             <button onClick={()=>esit()}>=</button>
-            <button onClick={()=>bolum()}>/</button>
+            
             <h3></h3>
         </div>
     )
