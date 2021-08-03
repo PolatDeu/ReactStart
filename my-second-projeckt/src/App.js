@@ -6,7 +6,7 @@ import FunctionalComponent from './components/FunctionalComponent';
 function App() {
   return (
     <div className="App">
-      <ClassComponent name="Mehmet"/>
+      <ClassComponent name="Mehmett"/>
       <FunctionalComponent name="Ahmet"/>
     </div>
   );
