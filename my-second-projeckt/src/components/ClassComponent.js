@@ -12,7 +12,7 @@ class ClassComponent extends React.Component {
                 Clarusway
                 </h1>
                 <p>Class Component</p>
-                <p>Mein Name is {this.props.name} {this.state.surname}</p>
+                <p>Mein Name is hk {this.props.name} {this.state.surname}</p>
                 
             </div>
         )
