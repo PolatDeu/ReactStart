@@ -9,7 +9,7 @@ class ClassComponent extends React.Component {
         return(
             <div className="wrapper">
                 <h1>
-                Clarusway
+                ClaruswayASDF
                 </h1>
                 <p>Class Component</p>
                 <p>Mein Name is hk {this.props.name} {this.state.surname}</p>
