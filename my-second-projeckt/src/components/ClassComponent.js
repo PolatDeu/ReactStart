@@ -3,7 +3,7 @@ import React from "react";
 class ClassComponent extends React.Component {
     constructor(props){
         super(props);
-        this.state={surname:'Yilmaz'}
+        this.state={surname:'Yilmazt'}
     }
     render(){
         return(
