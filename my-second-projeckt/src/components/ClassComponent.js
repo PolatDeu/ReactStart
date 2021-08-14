@@ -9,7 +9,7 @@ class ClassComponent extends React.Component {
         const style = {
             color: 'black',
             backgroundcolor: 'blue',
-            padding:5,
+            padding:15,
             fontSize: 20
         }
         return(
